@@ -1,0 +1,38 @@
+body{
+	font-size: 16px;
+	background-image: url("img/background.png");
+}
+
+
+.container{
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	column-gap: 20px;
+}
+
+.container nav{
+	background-color: transparent;
+	border-bottom: 0px;
+	justify-content: center;
+	font-size: 1.3rem;
+}
+
+.feed{
+	background-color: rgba(140,175,206, .3);
+	width: 800px;
+}
+
+.menu{
+	background-color:  rgba(255,201,236, .3);
+	width: 300px;
+	
+}
+
+.feed, .menu{
+	border-radius: 15px;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+h1{
+	margin-left: 10px;
+}

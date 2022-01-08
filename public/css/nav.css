@@ -1,0 +1,65 @@
+
+
+a{
+	text-decoration: none;
+	color: inherit;
+}
+
+nav{
+	display: flex;
+	justify-content: space-between;
+	background-color: rgba(57, 72, 86, .8);
+	margin-bottom: 10px;
+
+	border-bottom: 2px solid rgb(86, 57, 58);
+}
+
+nav ul{
+	display: flex;
+	list-style-type: none;
+	margin: 0 20px;
+	display: flex;
+    align-items: center;
+}
+
+nav ul li{
+	padding: 7px;
+}
+
+nav ul li a{
+	margin-top:  3px;
+	height: 100%;
+}
+
+nav ul li button{
+	font-size: 1rem;
+	font-family: inherit;
+	border: 0;
+	padding: 0;
+	display: inline-block;
+	background-color:  transparent;
+	cursor: pointer;
+}
+
+
+nav input{
+	width: 100%;
+}
+
+.nav-user a:hover, .nav-user button:hover{
+	font-weight: bold;
+	font-size: 1.1rem;
+}
+
+.nav-header{
+	font-size: 1.4rem;
+	font-weight: bold;
+}
+
+.find-game{
+	height: 2rem;
+	width: 20rem;
+	border-radius: 2px;
+	border: 2px solid black;
+  	border-radius: 4px;
+}

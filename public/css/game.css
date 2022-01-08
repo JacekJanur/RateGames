@@ -1,0 +1,50 @@
+.game-textbar{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.add-comment form{
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.game-textbar-right svg{
+	color: gold;
+	width: 20px;
+	cursor: pointer;
+}
+
+.game-textbar-right:last-child{
+	padding-right: 10px;
+}
+
+.comment{
+	border-bottom: 1px solid #000000;
+}
+
+.comment-header svg{
+	color: red;
+	width: 10px;
+	cursor: pointer;
+}
+
+.comment-header .top{
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.comment-header h5{
+	font-size: 1.3rem;
+	margin: 0;
+}
+
+.comment-header p{
+	margin: 0;
+}
+
+.new-comment-text{
+	width: 80%;
+}

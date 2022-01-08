@@ -1,0 +1,54 @@
+.game{
+	position: relative;
+	margin-bottom: 20px;
+}
+
+.image-opacity {
+    position: relative;
+    background-color: #000000;
+}
+
+.game img{
+	width: 100%;
+	opacity: 0.9;
+	transition: opacity .2s;
+}
+
+.game img:hover{
+	opacity: 1;
+}
+
+.game-textbar{
+	background-color: rgba(0, 0, 0, .6);
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	color: white;
+}
+
+.game-textbar > *{
+	padding-left: 10px;
+}
+
+.game h3{
+	font-size: 1.4rem;
+	margin-bottom: 0;
+}
+
+.game p{
+	font-size: .8rem;
+	margin-bottom: 15px;
+}
+
+.rating-wrapper{
+	margin-top: 10px;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.rating-avg
+{
+	display: flex;
+	align-items: center;
+}
