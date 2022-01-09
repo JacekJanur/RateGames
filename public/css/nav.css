@@ -5,6 +5,10 @@ a{
 	color: inherit;
 }
 
+ul{
+	list-style-type: none;
+}
+
 nav{
 	display: flex;
 	justify-content: space-between;
@@ -16,7 +20,6 @@ nav{
 
 nav ul{
 	display: flex;
-	list-style-type: none;
 	margin: 0 20px;
 	display: flex;
     align-items: center;

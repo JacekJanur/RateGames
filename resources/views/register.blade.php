@@ -5,13 +5,13 @@
 	<form class="login" action="{{ route('register')}}" method="post">
 		@csrf
 			<label for="name">Username</label>
-			<input type="text" name="name" id="name" placeholder="Your Username" class="" value="{{ old('name')}}">
+			<input type="text" name="name" id="name" placeholder="Your Username" class="@error('name') input-error @enderror" value="{{ old('name')}}">
 
 			<label for="email">Email</label>
-			<input type="text" name="email" id="email" placeholder="Your Email" class="" value="{{ old('email')}}">
+			<input type="text" name="email" id="email" placeholder="Your Email" class="@error('email') input-error @enderror" value="{{ old('email')}}">
 
 			<label for="password">Password</label>
-			<input type="password" name="password" id="password" placeholder="Your Password" class="" value="{{ old('password')}}">
+			<input type="password" name="password" id="password" placeholder="Your Password" class="@error('password') input-error @enderror" value="{{ old('password')}}">
 
 			<label for="password_confirmation">Password Confirmation</label>
 			<input type="password" name="password_confirmation" id="password_confirmation" placeholder="Password Confirmation" class="">

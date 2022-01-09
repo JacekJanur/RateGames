@@ -1,9 +1,45 @@
 /* Full-width inputs */
+.login{
+  margin-bottom: 10px;
+}
 .login input[type=text], input[type=password] {
-  width: 60%;
+  width: 100%;
   padding: 12px 20px;
   margin: auto;
   display: block;
   border: 1px solid #ccc;
   box-sizing: border-box;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+input[type=text].input-error, input[type=password].input-error{
+  border: 2px solid red;
+}
+
+.login label{
+  font-size: 1.2rem;
+}
+
+.login button{
+  padding:  5px 10px;
+  margin: auto;
+  display:block;
+  cursor: pointer;
+}
+
+.errors ul{
+  padding: 0;
+  margin: 10px 0;
+  width: 100%;
+  display: inline-block;
+  color: #D63301;
+  background-color: #FFCCBA;
+  background-image: url('https://i.imgur.com/GnyDvKN.png');
+  background-repeat: no-repeat;
+  background-position: 10px center;
+}
+
+.errors ul li{
+  padding-left: 50px;
 }
