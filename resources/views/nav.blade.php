@@ -11,6 +11,9 @@
     <link href="{{ asset('css/game-post.css') }}" rel="stylesheet">
     <link href="{{ asset('css/login.css') }}" rel="stylesheet">
     <link href="{{ asset('css/game.css') }}" rel="stylesheet">
+
+    <script src="{{ asset('js/submit-enter.js') }}"></script> 
+
 </head>
 <body>
     <nav>
@@ -18,7 +21,7 @@
           <li><a href="{{route('home')}}" class="nav-header">RateGames</a></li>
           <li>
               <form action="">
-                   <input class="find-game"type="text" placeholder="Find game">
+                   <input class="find-game" name="search" id="search" type="text" placeholder="Find game">
               </form>
           </li>
         </ul> 

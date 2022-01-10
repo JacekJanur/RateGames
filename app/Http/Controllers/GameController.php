@@ -9,7 +9,16 @@ class GameController extends Controller
 {
     public function index()
     {
-        return view('main-page')->with('games', Game::orderBy('created_at')->paginate(5));
+        if(isset($_GET['search']))
+        {
+            $games = Game::haveText($_GET['search']);
+        }
+        else
+        {
+            $games = Game::orderBy('created_at')->paginate(5);
+        }
+
+        return view('main-page')->with('games', $games);
     }
 
     public function showGame($id)

@@ -7,5 +7,5 @@
 			<x-post-game :game="$game" />
 		</a>
 	@endforeach
-	{{ $games->links( "pagination::bootstrap-4") }}
+	{{ $games->appends(request()->query())->links( "pagination::bootstrap-4") }}
 @endsection

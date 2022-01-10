@@ -29,4 +29,9 @@ class Game extends Model
     }
 
 
+    public static function haveText($text)
+    {
+        return Game::where('name', 'like', '%' . $text . '%')->orWhere('category', 'like', '%' . $text . '%')->paginate(5);
+    }
+
 }
