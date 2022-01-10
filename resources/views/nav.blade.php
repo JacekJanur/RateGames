@@ -21,7 +21,7 @@
          <ul>
           <li><a href="{{route('home')}}" class="nav-header">RateGames</a></li>
           <li>
-              <form action="">
+              <form action="/" method="get">
                    <input class="find-game" name="search" id="search" type="text" placeholder="Find game">
               </form>
           </li>
