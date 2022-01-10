@@ -37,8 +37,9 @@ Route::middleware([CheckGameExists::class])->group(function () {
 
 Route::get('/user/{id}', [UserController::class, 'index'])->name('user')->middleware([CheckUserExists::class]);
 
-
 Route::get('/popular', [GameController::class, 'popular'])->name('popular');
+
+Route::get('/popular/{category}', [GameController::class, 'popular'])->name('popularCat');
 
 
 
