@@ -43,6 +43,8 @@ Route::get('/popular/{category}', [GameController::class, 'popular'])->name('pop
 
 Route::get('/commented', [GameController::class, 'commented'])->name('commented');
 
+Route::get('/commented/{category}', [GameController::class, 'commented'])->name('commentedCat');
+
 Route::get('/best-year/{year}', [GameController::class, 'bestByYear'])->name('bestYear');
 
 // AUTH

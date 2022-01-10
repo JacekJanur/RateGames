@@ -30,18 +30,27 @@ class GameController extends Controller
     {
         $games = Game::mostRating($category)->paginate(5);
 
-        return view('main-page')->with('games', $games);
+        return view('most-popular')->with([
+                'games'  => $games,
+                'category'   => $category,
+            ]);
     }
 
     public function commented($category="")
     {
         $games = Game::mostCommented($category)->paginate(5);
-        return view('main-page')->with('games', $games);
+        return view('most-commented')->with([
+                'games'  => $games,
+                'category'   => $category,
+            ]);
     }
 
     public function bestByYear($year)
     {
         $games = Game::bestByYear($year)->paginate(5);
-        return view('main-page')->with('games', $games);
+        return view('best-year')->with([
+                'games'  => $games,
+                'year'   => $year,
+            ]);
     }
 }
