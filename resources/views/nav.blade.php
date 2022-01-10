@@ -11,6 +11,7 @@
     <link href="{{ asset('css/game-post.css') }}" rel="stylesheet">
     <link href="{{ asset('css/login.css') }}" rel="stylesheet">
     <link href="{{ asset('css/game.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/responsive.css') }}" rel="stylesheet">
 
     <script src="{{ asset('js/submit-enter.js') }}"></script> 
 

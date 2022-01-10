@@ -23,6 +23,7 @@ nav ul{
 	margin: 0 20px;
 	display: flex;
     align-items: center;
+    min-width: 200px;
 }
 
 nav ul li{

@@ -6,6 +6,8 @@ body{
 
 .container{
 	display: flex;
+	flex-flow: row wrap;
+	flex-direction:row-reverse;
 	justify-content: center;
 	align-items: flex-start;
 	column-gap: 20px;
@@ -26,7 +28,11 @@ body{
 .menu{
 	background-color:  rgba(255,201,236, .3);
 	width: 300px;
-	
+	flex-shrink: 2;
+}
+
+.menu{
+
 }
 
 .feed, .menu{
