@@ -28,8 +28,20 @@ class GameController extends Controller
 
     public function popular($category="")
     {
-        $games = Game::withCount('rating')->orderBy('rating_count', 'desc')->where('category', 'like', '%'. $category . '%')->paginate(5);
+        $games = Game::mostRating($category)->paginate(5);
 
+        return view('main-page')->with('games', $games);
+    }
+
+    public function commented($category="")
+    {
+        $games = Game::mostCommented($category)->paginate(5);
+        return view('main-page')->with('games', $games);
+    }
+
+    public function bestByYear($year)
+    {
+        $games = Game::bestByYear($year)->paginate(5);
         return view('main-page')->with('games', $games);
     }
 }

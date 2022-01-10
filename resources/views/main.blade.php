@@ -8,9 +8,9 @@
 		<div class="menu">
 			<ul>
           		<li><a href="{{route('popular')}}">Most popular games</a></li>
-          		<li><a href="news.asp">Most commended games</a></li>
-         		<li><a href="contact.asp">Best 2021 games</a></li>
-        		<li><a href="about.asp">Best indie games</a></li>
+          		<li><a href="{{route('commented')}}">Most commended games</a></li>
+         		<li><a href="{{route('bestYear', 2021)}}">Best 2021 games</a></li>
+        		<li><a href="{{route('popular')}}/indie">Best indie games</a></li>
         	</ul> 
 		</div>
 	</div>	

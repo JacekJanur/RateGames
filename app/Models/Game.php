@@ -36,7 +36,17 @@ class Game extends Model
 
     public static function mostRating($category = "")
     {
-        return 0;
+        return Game::withCount('rating')->orderBy('rating_count', 'desc')->where('category', 'like', '%'. $category . '%');
+    }
+
+    public static function mostCommented($category = "")
+    {
+        return Game::withCount('comments')->orderBy('comments_count', 'desc')->where('category', 'like', '%'. $category . '%');
+    }
+
+    public static function bestByYear($year)
+    {
+        return Game::mostRating()->where('created_at', 'like', '%'. $year . '%');
     }
 
 }

@@ -41,8 +41,9 @@ Route::get('/popular', [GameController::class, 'popular'])->name('popular');
 
 Route::get('/popular/{category}', [GameController::class, 'popular'])->name('popularCat');
 
+Route::get('/commented', [GameController::class, 'commented'])->name('commented');
 
-
+Route::get('/best-year/{year}', [GameController::class, 'bestByYear'])->name('bestYear');
 
 // AUTH
 
