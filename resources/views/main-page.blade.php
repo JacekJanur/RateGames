@@ -21,9 +21,6 @@
 							@for ($i = 1; $i <= $game->rating->avg('rating'); $i++)
 						    <x-tni-star />
 							@endfor
-							@for ($i = $game->rating->avg('rating'); $i <= 5; $i++)
-							    <x-tni-star-o />
-							@endfor
 						</div>
 						<div class="rating-avg">
 							{{ round($game->rating->avg('rating'), 2) }}

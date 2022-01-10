@@ -3,6 +3,8 @@
 namespace App\Models;
 
 use App\Models\Comment;
+use App\Models\Game;
+use App\Models\Rating;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -64,5 +66,9 @@ class User extends Authenticatable
         return $this->comments->where('id', $comment_id)->first();
     }
 
+    public function ratedGames()
+    {
+        return $this->belongsToMany(Game::class, 'ratings')->orderBy('ratings.created_at', 'desc');
+    }
 
 }

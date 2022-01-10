@@ -12,12 +12,18 @@
 				@if($game->rating != null)
 					<div class="rating-wrapper">
 						<div class="icons">
-							@for ($i = 1; $i <= $game->rating->avg('rating'); $i++)
-						    <x-tni-star />
-							@endfor
-							@for ($i = $game->rating->avg('rating'); $i <= 5; $i++)
-							    <x-tni-star-o />
-							@endfor
+							@if($game->rating->avg('rating') == 0)
+								<x-tni-star-o />
+								<x-tni-star-o />
+								<x-tni-star-o />
+								<x-tni-star-o />
+								<x-tni-star-o />
+
+							@else
+								@for ($i = 1; $i <= $game->rating->avg('rating'); $i++)
+							    <x-tni-star />
+								@endfor
+							@endif
 						</div>
 						<div class="rating-avg">
 							{{ round($game->rating->avg('rating'), 2) }}
