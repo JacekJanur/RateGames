@@ -25,4 +25,11 @@ class GameController extends Controller
     {
         return view('show-game')->with('game', Game::find($id));
     }
+
+    public function popular()
+    {
+        $games = Game::withCount('rating')->orderBy('rating_count', 'desc')->paginate(5);
+
+        return view('main-page')->with('games', $games);
+    }
 }

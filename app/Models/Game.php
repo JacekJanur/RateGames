@@ -34,4 +34,9 @@ class Game extends Model
         return Game::where('name', 'like', '%' . $text . '%')->orWhere('category', 'like', '%' . $text . '%')->paginate(5);
     }
 
+    public static function mostRating($category = "")
+    {
+        return 0;
+    }
+
 }

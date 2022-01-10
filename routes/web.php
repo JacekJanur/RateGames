@@ -38,6 +38,12 @@ Route::middleware([CheckGameExists::class])->group(function () {
 Route::get('/user/{id}', [UserController::class, 'index'])->name('user')->middleware([CheckUserExists::class]);
 
 
+Route::get('/popular', [GameController::class, 'popular'])->name('popular');
+
+
+
+
+// AUTH
 
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post("/login", [LoginController::class, 'store']);
