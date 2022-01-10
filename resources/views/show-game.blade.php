@@ -30,7 +30,7 @@
 		</div>
 
 		@foreach ($game->comments as $comment)
-			<x-comment :comment="$comment" />
+			<x-comment :comment="$comment" :game="$game" />
 		@endforeach
 	</div>
 @endsection

@@ -7,10 +7,12 @@ use Illuminate\View\Component;
 class Comment extends Component
 {
     public $comment;
+    public $game;
 
-    public function __construct($comment)
+    public function __construct($comment, $game)
     {
         $this->comment = $comment;
+        $this->game = $game;
     }
 
     /**
