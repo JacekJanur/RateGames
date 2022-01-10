@@ -16,7 +16,7 @@ class GameFactory extends Factory
         return [
             'name' => $this->faker->name(),
             'category' => $this->faker->randomElement(['Indie', 'FPS', 'Action', 'Horror']),
-            'text' => $this->faker->text($maxNbChars = 500)
+            'text' => $this->faker->text($maxNbChars = 100)
         ];
     }
 }

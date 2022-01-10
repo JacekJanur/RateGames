@@ -16,7 +16,7 @@ class CommentFactory extends Factory
         return [
             'game_id' => $this->faker->numberBetween(21, 30),
             'user_id' => $this->faker->numberBetween(1, 10),
-            'text' => $this->faker->text($maxNbChars = 500)
+            'text' => $this->faker->text($maxNbChars = 100)
         ];
     }
 }
