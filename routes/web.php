@@ -6,6 +6,8 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\RateController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\UserController;
+use App\Http\Middleware\CheckUserExists;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -32,6 +34,8 @@ Route::middleware([CheckGameExists::class])->group(function () {
         Route::post('/game/{id}/comments/{comment_id}/delete', [CommentController::class, 'delete'])->middleware('auth');
 
     });
+
+Route::get('/user/{id}', [UserController::class, 'index'])->name('user')->middleware([CheckUserExists::class]);
 
 
 

@@ -25,7 +25,7 @@
 
         <ul class="nav-user">
             @if (Auth::check())
-              <li><a href="default.asp">
+              <li><a href="{{route('user', Auth::user()->id)}}">
                 My Profile</a>
               </li>
               <li>
